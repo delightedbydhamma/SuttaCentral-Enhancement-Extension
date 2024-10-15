@@ -1,4 +1,5 @@
 import { querySelectorDeep } from "query-selector-shadow-dom";
+import "./VpView/settingsmenu.css";
 
 export default defineContentScript({
   matches: ["*://suttacentral.net/*"],
@@ -9,7 +10,7 @@ export default defineContentScript({
       const innerSetting = querySelectorDeep("#setting_menu section");
 
       if (innerSetting !== null) {
-        innerSetting.style.display = "inherit";
+        innerSetting.style.display = "inline-block";
         innerSetting.style.overflowY = "scroll";
         innerSetting.style.height = "60vh";
 
